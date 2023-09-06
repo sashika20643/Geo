@@ -61,91 +61,48 @@ require_once 'header.php';
     <div class="container">
         <h1>Available Instruments</h1>
         <div class="instrument-grid">
-            <div class="instrument-card">
-                <img src="instrument1.jpg" alt="Instrument 1">
-                <h2>Instrument 1</h2>
-                <p>Short description of Instrument 1.</p>
-                <a href="Rental2.php?id=1" class="button">Details</a>
-            </div>
-            <div class="instrument-card">
-                <img src="instrument2.jpg?" alt="Instrument 2">
-                <h2>Instrument 2</h2>
-                <p>Short description of Instrument 2.</p>
-                <a href="Rental2.php?id=2" class="button">Details</a>
-            </div>
-            <div class="instrument-card">
-                <img src="instrument2.jpg" alt="Instrument 2">
-                <h2>Instrument 2</h2>
-                <p>Short description of Instrument 2.</p>
-                <a href="Rental2.php?id=3" class="button">Details</a>
-            </div>
-            <div class="instrument-card">
-                <img src="instrument2.jpg" alt="Instrument 2">
-                <h2>Instrument 2</h2>
-                <p>Short description of Instrument 2.</p>
-                <a href="Rental2.php?id=4" class="button">Details</a>
-            </div>
-            <div class="instrument-card">
-                <img src="instrument2.jpg" alt="Instrument 2">
-                <h2>Instrument 2</h2>
-                <p>Short description of Instrument 2.</p>
-                <a href="Rental2.php?id=5" class="button">Details</a>
-            </div>
-            <div class="instrument-card">
-                <img src="instrument2.jpg?id=6" alt="Instrument 2">
-                <h2>Instrument 2</h2>
-                <p>Short description of Instrument 2.</p>
-                <a href="Rental2.php" class="button">Details</a>
-            </div>
-            <div class="instrument-card">
-                <img src="instrument2.jpg" alt="Instrument 2">
-                <h2>Instrument 2</h2>
-                <p>Short description of Instrument 2.</p>
-                <a href="Rental2.php" class="button">Details</a>
-            </div>
-            <div class="instrument-card">
-                <img src="instrument2.jpg" alt="Instrument 2">
-                <h2>Instrument 2</h2>
-                <p>Short description of Instrument 2.</p>
-                <a href="Rental2.php" class="button">Details</a>
-            </div>
-            <div class="instrument-card">
-                <img src="instrument2.jpg" alt="Instrument 2">
-                <h2>Instrument 2</h2>
-                <p>Short description of Instrument 2.</p>
-                <a href="Rental2.php" class="button">Details</a>
-            </div>
-            <div class="instrument-card">
-                <img src="instrument2.jpg" alt="Instrument 2">
-                <h2>Instrument 2</h2>
-                <p>Short description of Instrument 2.</p>
-                <a href="Rental2.php" class="button">Details</a>
-            </div>
-            <div class="instrument-card">
-                <img src="instrument2.jpg" alt="Instrument 2">
-                <h2>Instrument 2</h2>
-                <p>Short description of Instrument 2.</p>
-                <a href="Rental2.php" class="button">Details</a>
-            </div>
-            <div class="instrument-card">
-                <img src="instrument2.jpg" alt="Instrument 2">
-                <h2>Instrument 2</h2>
-                <p>Short description of Instrument 2.</p>
-                <a href="Rental2.php" class="button">Details</a>
-            </div>
-            <div class="instrument-card">
-                <img src="instrument2.jpg" alt="Instrument 2">
-                <h2>Instrument 2</h2>
-                <p>Short description of Instrument 2.</p>
-                <a href="Rental2.php" class="button">Details</a>
-            </div>
-            <div class="instrument-card">
-                <img src="instrument2.jpg" alt="Instrument 2">
-                <h2>Instrument 2</h2>
-                <p>Short description of Instrument 2.</p>
-                <a href="Rental2.php" class="button">Details</a>
-            </div>
 
+        <?php
+            // Database connection (assuming you already have it declared)
+            // ...
+            require_once 'includes/dbh.inc.php';
+
+            if ($_SERVER["REQUEST_METHOD"] == "GET" && isset($_GET["cat"])) {
+                $cat = $_GET["cat"];
+            // SQL query to retrieve all instruments
+            $sql = "SELECT * FROM rental WHERE cat='$cat'";
+            $result = $conn->query($sql);
+
+            if ($result->num_rows > 0) {
+                while ($row = $result->fetch_assoc()) {
+                    $instrument_id = $row['id'];
+                    $instrument_name = $row['name'];
+                    $instrument_description = $row['description'];
+                    $price=$row['price'];
+                    $image_path = $row['img'];
+                    ?>
+                    <div class="col-md-4 mb-4">
+                        <div class="instrument-card">
+                            <img src="<?php echo $image_path; ?>" alt="<?php echo $instrument_name; ?>">
+                            <h2><?php echo $instrument_name; ?></h2>
+                            <p><?php echo $price; ?></p>
+                            <a href="Rental<?php echo $instrument_id; ?>.php" class="btn btn-primary">Details</a>
+                        </div>
+                    </div>
+                    <?php
+                }
+            } else {
+                echo "No instruments found.";
+            }
+
+            $conn->close();}
+            else{
+                echo"error";
+            }
+            ?>
+
+
+           
         </div>
     </div>
 </body>

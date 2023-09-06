@@ -17,7 +17,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $cat=$_POST['cat'];
 
     // File upload handling
-    $target_dir = "../images/uploads/";
+    $target_dir = "/BGproject/images/uploads/";
     $target_file = $target_dir . basename($_FILES["image"]["name"]);
     move_uploaded_file($_FILES["image"]["tmp_name"], $target_file);
 
