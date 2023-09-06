@@ -15,6 +15,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $instrument_details = $_POST['instrument_details'];
     $price = $_POST['price'];
     $ldate=$_POST['l_date'];
+    $cat=$_POST['cat'];
 
     // File upload handling
     $target_dir = "../../images/uploads/";
@@ -22,8 +23,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     move_uploaded_file($_FILES["image"]["tmp_name"], $target_file);
 
     // SQL query to insert data
-    $sql = "INSERT INTO rental (name, description, l_date , img, price)
-            VALUES ('$instrument_name','$instrument_details','$ldate','$target_file', $price)";
+    $sql = "INSERT INTO rental (name, description, l_date , img,cat, price)
+            VALUES ('$instrument_name','$instrument_details','$ldate','$target_file',$cat, $price)";
  
     if ($conn->query($sql) === TRUE) {
         echo "Instrument added successfully.";
@@ -64,6 +65,21 @@ include('../sidebar.php')
                 <label for="instrument_details">Instrument Details:</label>
                 <textarea class="form-control" id="instrument_details" name="instrument_details" rows="4" required></textarea>
             </div>
+
+            <div class="form-group">
+                <label for="instrument_details">Category:</label>
+                <select name="cat" id="cat">
+<option value="1" select>
+Total Stations
+</option>
+<option value="2">
+GPS Devices
+</option>
+<option value="3">Levels</option>
+<option value="4">Drones</option>
+                </select>
+            </div>
+
             <div class="form-group">
                 <label for="instrument_name">Last calibrated date:</label>
                 <input type="date" class="form-control" id="instrument_name" name="l_date" required>

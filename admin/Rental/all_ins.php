@@ -26,7 +26,7 @@ include('../sidebar.php')
                 <div class="d-flex justify-content-between">
 
                 <h2>List of Instruments</h2>
-<a class="btn btn-success" href="/BGproject/admin/create_ins.php">ADD</a>
+<a class="btn btn-success" href="/BGproject/admin/rental/create_ins.php">ADD</a>
                 </div>
 
         <table class="table table-striped">
