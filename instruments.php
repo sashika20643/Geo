@@ -99,26 +99,26 @@ footer {
             <img src="images/Rental/total-station.png" alt="Total Station">
             <h2>Total Stations</h2>
             <p>Rent our advanced total stations for accurate measurements and data collection in the field.</p>
-            <a href="Rental1.php/?cat=1" class="button">To the instruments</a>
+            <a href="instruments1.php/?cat=1" class="button">To the instruments</a>
         </div>
 
         <div class="card">
             <img src="images/rental/gps-device.jpg" alt="GPS Device">
             <h2>GPS Devices</h2>
             <p>Get precise positioning and navigation with our GPS devices available for rent.</p>
-            <a href="Rental1.php/?cat=2" class="button">To the instruments</a>
+            <a href="instruments1.php/?cat=2" class="button">To the instruments</a>
         </div>
         <div class="card">
             <img src="images/rental/level.jpg" alt="Level">
             <h2>Levels</h2>
             <p>Get precise elevation and accurate elevations with our level instruments available for rent.</p>
-            <a href="Rental1.php/?cat=3" class="button">To the instruments</a>
+            <a href="instruments1.php/?cat=3" class="button">To the instruments</a>
         </div>
         <div class="card">
             <img src="images/rental/drone.png" alt="GPS Device">
             <h2>Drones</h2>
             <p>Get high quality imagenary accuracy with our drones available for rent.</p>
-            <a href="Rental1.php/?cat=4" class="button">To the instruments</a>
+            <a href="instruments1.php/?cat=4" class="button">To the instruments</a>
         </div>
     </div>
 </body>
