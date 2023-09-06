@@ -12,7 +12,7 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">
+                            <a class="nav-link" href="/BGproject/admin/rental/all_ins.php">
                                 <i class="fas fa-book"></i> Rentales
                             </a>
                         </li>

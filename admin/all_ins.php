@@ -55,7 +55,8 @@ include('sidebar.php')
                         echo "<td><img src='" . $row['instrument_img'] . "' alt='Instrument Image' width='100'></td>";
                         echo "<td>$" . $row['price'] . "</td>";
                         echo "<td><a class='btn btn-primary' href='/bgproject/admin/edit_ins.php?instrument_id=".$row['instrument_id']."'>Edit</a> </td>";
-                        echo "<td><a class='btn btn-danger' href='#'>Delete</a> </td>";
+                        echo "<td><a class='btn btn-danger' href='/bgproject/admin/deletep.php?instrument_id=".$row['instrument_id']."'>Delete</a> </td>";
+
                        
                         echo "</tr>";
                     }

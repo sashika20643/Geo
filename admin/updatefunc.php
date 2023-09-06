@@ -31,6 +31,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     if ($conn->query($update_sql) === TRUE) {
         echo "<div class='alert alert-success'>Instrument updated successfully.</div>";
+        header("Location: /BGproject/admin/all_ins");
         // Redirect to the instrument list page or other appropriate page
         // header("Location: instrument_list.php");
         // exit(); // Ensure no further code execution after redirection

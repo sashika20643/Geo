@@ -26,6 +26,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     if ($conn->query($sql) === TRUE) {
         echo "Instrument added successfully.";
+        header("Location: /BGproject/admin/all_ins");
     } else {
         echo "Error: " . $sql . "<br>" . $conn->error;
     }
