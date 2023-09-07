@@ -68,7 +68,7 @@
         <body>
             <header class="nav-bar">
                 <div class="logo">
-               <img src="images/logo.png" alt="Logo"> 
+               <img src="/bgproject/images/logo.png" alt="Logo"> 
                 </div>
                     <nav>
                         <ul>

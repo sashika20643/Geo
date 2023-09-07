@@ -5,6 +5,9 @@ require_once 'header.php';
   <head>
     <title>Geodetia</title>
   </head>
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
     <style>
     
     body {
@@ -129,6 +132,23 @@ h4{
       <body>
         
         <section class="hero">
+    
+        <?php
+
+
+// Check if the message exists in the session
+
+if (isset($_SESSION['message'])) {
+    // Display the message and then remove it from the session
+    echo '    <div class="alert alert-primary" role="alert" style="z-index=999;">';
+    echo $_SESSION['message'];
+    echo '</div>';
+  
+    unset($_SESSION['message']);
+}
+?>
+
+
             <h1>Welcome to our Surveying Equipment & services Company</h1>
             <p>Providing High-Quality Surveying Equipment and Services</p>
           </section>
@@ -186,19 +206,21 @@ h4{
               <div class="service">
                 <h3>Paid Practical Sessions</h3>
                 <p>Enhance your skills with advanced practical sessions.</p>
-                <a href="registration.html">Register Now</a>
+                <a href="/bgproject/services/paid_service.php">Register Now</a>
               </div>
               <!-- Repeat for other services -->     
             </section>
             <section class="services">
             <div class="service">
-                <h3>Paid Practical Sessions</h3>
+                <h3>Free Practical Sessions</h3>
                 <p>Enhance your skills with advanced practical sessions.</p>
-                <a href="registration.html">Register Now</a>
+                <a href="/bgproject/services/free_service.php">Register Now</a>
               </div>
               <!-- Repeat for other services -->    
           </section>
- 
+          <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
           <!-- Other sections like articles and rental -->
       </body>
 </html>

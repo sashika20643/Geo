@@ -27,7 +27,7 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">
+                            <a class="nav-link" href="/BGproject/admin/services/services.php">
                                 <i class="fas fa-users"></i> Services
                             </a>
                         </li>

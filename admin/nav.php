@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-lg navbar-dark">
     <a class="navbar-brand" href="#">
-    <img src="../images/logo.png" alt="Logo" style="width:100px" class="d-inline-block align-top">
+    <img src="/bgproject/images/logo.png" alt="Logo" style="width:100px" class="d-inline-block align-top">
      
     </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">

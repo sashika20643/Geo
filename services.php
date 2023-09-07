@@ -104,10 +104,10 @@ footer {
         </div>
 
         <div class="card">
-            <img src="images/rental/gps-device.jpg" alt="GPS Device">
+            <img src="/bgproject/images/paid_service.jpg" alt="GPS Device">
             <h2>Paid session (for anyone)</h2>
             <p>Get precise positioning and navigation with our GPS devices available for rent.</p>
-            <a href="instruments1.php/?cat=2" class="button">To the Service</a>
+            <a href="/bgproject/services/paid_service.php" class="button">To the Service</a>
         </div>
         <div class="card">
             <img src="images/rental/level.jpg" alt="Level">
