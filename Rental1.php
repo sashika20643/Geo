@@ -86,7 +86,7 @@ require_once 'header.php';
                             <img src="<?php echo $image_path; ?>" alt="<?php echo $instrument_name; ?>">
                             <h2><?php echo $instrument_name; ?></h2>
                             <p><?php echo $price; ?></p>
-                            <a href="Rental<?php echo $instrument_id; ?>.php" class="btn btn-primary">Details</a>
+                            <a href="/bgproject/rental3.php?instrument_id=<?php echo $instrument_id; ?>" class="btn btn-primary">Details</a>
                         </div>
                     </div>
                     <?php
