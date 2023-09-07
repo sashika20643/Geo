@@ -110,10 +110,10 @@ footer {
             <a href="/bgproject/services/paid_service.php" class="button">To the Service</a>
         </div>
         <div class="card">
-            <img src="images/rental/level.jpg" alt="Level">
+            <img src="/bgproject/images/rental/level.jpg" alt="Level">
             <h2>Instrument calibration</h2>
             <p>Get precise elevation and accurate elevations with our level instruments available for rent.</p>
-            <a href="instruments1.php/?cat=3" class="button">To the Service</a>
+            <a href="/bgproject/services/calibration_service.php" class="button">To the Service</a>
         </div>
         
     </div>
