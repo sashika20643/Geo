@@ -53,12 +53,13 @@ include('../sidebar.php')
             <!-- Instrument Calibration Card -->
             <div class="col-md-4 mb-4">
                 <div class="card">
-                    <img src="instrument-calibration.jpg" class="card-img-top" alt="Instrument Calibration">
+                    <img src="/bgproject/images/rental/level.jpg" class="card-img-top" alt="Instrument Calibration" style="height:150px">
                     <div class="card-body">
                         <h5 class="card-title">Instrument Calibration</h5>
                         <p class="card-text">Learn about our instrument calibration services and expertise.</p>
-                        <a href="instrument_calibration.php" class="btn btn-primary">Requests</a>
+                        <a href="calibration_service.php" class="btn btn-primary">Requests</a>
                     </div>
+                  
                 </div>
             </div>
         </div>

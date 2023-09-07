@@ -154,8 +154,42 @@ if (isset($_SESSION['message'])) {
           </section>
           <section class="featured-products">
             <h2>Featured Products</h2>
+            <div class="row">
+            <?php
+            // Database connection (assuming you already have it declared)
+            // ...
+            require_once 'includes/dbh.inc.php';
+
+            // Query to retrieve product information from the instruments table
+            $sql = "SELECT * FROM instruments LIMIT 4"; // Limit to 3 products for this example
+            $result = $conn->query($sql);
+
+            if ($result->num_rows > 0) {
+                while ($row = $result->fetch_assoc()) {
+                  
+                    echo '<div class="product">';
+                    echo '<img src="' . $row['instrument_img'] . '" alt="' . $row['instrument_name'] . '">';
+                    echo '<h3>' . $row['instrument_name'] . '</h3>';
+               
+                    echo '<p>' . $row['price'] . '</p>';
+                   
+                    echo '<a href="/bgproject/checkout.php?instrument_id=';
+                    echo $row["instrument_id"];
+                    echo '">';
+                    echo '<button>Buy</button>';
+                    echo '</a>';
+                    echo '</div>';
+                
+                }
+            } else {
+                echo '<p>No products found.</p>';
+            }
+
+            $conn->close();
+            ?>
+
             <!--Product 1-->
-              <div class="product">
+              <!-- <div class="product">
                 <img src="images/GNSS1.jpg" alt="Product 1">
                 <h3>Trimble R10</h3>
                 <p>
@@ -165,34 +199,17 @@ if (isset($_SESSION['message'])) {
               </div>
 	
 	          <!--Product 2-->
-	            <div class="product">
+	            <!-- <div class="product">
                 <img src="images/TS.jpg" alt="Product 2">
                 <h3>Trimble RTS 673</h3>
                 <p>
 	              Electrical and Plumbing contractors.  The RTS673 features include: Active tracking, High Precision (HP, DR) reflectorless and visible red laser pointer for precise layout tasks.
 	              </p>
                 <button>Add to Cart</button>
-              </div>
+              </div> -->
 	
 	          <!--Product 3-->
-	            <div class="product">
-                <img src="images/drone.jpg" alt="Product 3">
-                <h3>P330 pro VLOT</h3>
-                <p>
-	              The P330 Pro is a high-performance vertical takeoff and landing (VTOL) fixed-wing unmanned aircraft system (UAS), specially designed for aerial surveying and mapping applications. 
-	              </p>
-                <button>Add to Cart</button>
-              </div>
-	
-	          <!--Product 4-->
-	            <div class="product">
-                <img src="images/level.jpg" alt="Product 4">
-                <h3>Sokkia Digital Level</h3>
-                <p>
-                The SDL30/SDL50 Sokkia Digital Level is an accurate, dependable digital level that combines user-friendly convenience with unprecedented cost performance. 
-                </p>
-                <button>Add to Cart</button>
-              </div>
+	         
 	
             <!-- Repeat for other featured products -->
           </section>

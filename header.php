@@ -72,11 +72,11 @@
                 </div>
                     <nav>
                         <ul>
-                        <li><a href="index.php">Home</a></li>
-                        <li><a href="instruments.php">Products</a></li>
-                        <li><a href="services.php">Services</a></li>
+                        <li><a href="/bgproject">Home</a></li>
+                        <li><a href="/bgproject/instruments.php">Products</a></li>
+                        <li><a href="/bgproject/services.php">Services</a></li>
                         <li><a href="articles.php">Articles</a></li>
-                        <li><a href="Rental.php">Rental</a></li>
+                        <li><a href="/bgproject/Rental.php">Rental</a></li>
                         <li>
                             <?php
                         session_start(); // Start the session

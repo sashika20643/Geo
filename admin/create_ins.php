@@ -17,13 +17,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $cat=$_POST['cat'];
 
     // File upload handling
-    $target_dir = "/BGproject/images/uploads/";
+    $target_dir = "../images/uploads/";
     $target_file = $target_dir . basename($_FILES["image"]["name"]);
     move_uploaded_file($_FILES["image"]["tmp_name"], $target_file);
+    $target_f = "/BGproject/images/uploads/". basename($_FILES["image"]["name"]);
+
 
     // SQL query to insert data
     $sql = "INSERT INTO instruments (instrument_name, instrument_img, instrument_details,cat, price)
-            VALUES ('$instrument_name', '$target_file', '$instrument_details',$cat, $price)";
+            VALUES ('$instrument_name', '$target_f', '$instrument_details',$cat, $price)";
 
     if ($conn->query($sql) === TRUE) {
         echo "Instrument added successfully.";
