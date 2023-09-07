@@ -97,10 +97,10 @@ footer {
         <p>Explore our wide range of surveying equipment available for rent. Whether you need equipment for a short-term project or want to try before you buy, we have you covered.</p>
         
         <div class="card">
-            <img src="images/Rental/total-station.png" alt="Total Station">
+            <img src="/bgproject/images/free_service.jpg" alt="Total Station">
             <h2>free session (for school A/L students)</h2>
             <p>Rent our advanced total stations for accurate measurements and data collection in the field.</p>
-            <a href="instruments1.php/?cat=1" class="button">To the Service</a>
+            <a href="/bgproject/services/free_service.php" class="button">To the Service</a>
         </div>
 
         <div class="card">

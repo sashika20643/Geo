@@ -17,8 +17,18 @@
                             </a>
                         </li>
                         <li class="nav-item">
+                            <a class="nav-link" href="/BGproject/admin/orders/orders.php">
+                                <i class="fas fa-users"></i> Orders
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/BGproject/admin/rentalrequests/rentalreqs.php">
+                                <i class="fas fa-users"></i> Rental Requests
+                            </a>
+                        </li>
+                        <li class="nav-item">
                             <a class="nav-link" href="#">
-                                <i class="fas fa-users"></i> Users
+                                <i class="fas fa-users"></i> Services
                             </a>
                         </li>
                     </ul>
