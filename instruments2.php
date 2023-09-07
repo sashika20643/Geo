@@ -46,7 +46,7 @@ if (!isset($_SESSION["username"])) {
                 ?>
             
                 <div class="row">
-                <h1><?php echo $instrument_name; ?></h1>
+            
                     <div class="col-md-6">
                         <img src="<?php echo $image_path; ?>" alt="<?php echo $instrument_name; ?>" class="img-fluid">
                     </div>
@@ -54,7 +54,7 @@ if (!isset($_SESSION["username"])) {
                         <h2><?php echo $instrument_name; ?></h2>
                         <p><?php echo $instrument_details; ?></p>
                         <p><strong>Price: $<?php echo $price; ?></strong></p>
-                        <a href="#" class="btn btn-primary">Buy Now</a>
+                        <a href="/bgproject/checkout.php?instrument_id=<?php echo $instrument_id; ?>" class="btn btn-primary">Buy Now</a>
                     </div>
                 </div>
                 <?php
